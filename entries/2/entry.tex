@@ -1,0 +1,66 @@
+In der vergangenen Session haben wir uns mit einigen Grundlagen zum Verhalten idealer Gase auseinandergesetzt. Dem idealen Gas wird die Abwesenheit dreier Eigenschaften unterstellt:
+\begin{wrapfigure}{r}{6cm}
+%\vspace{5mm}
+%\begin{minipage}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{entries/2/table.png}
+    \label{fig:table}
+    \captionof{figure}{Begriffskonventionen}
+%\end{minipage}
+\end{wrapfigure}
+
+\textbf{1.} Die Gasmoleküle werden als dimensionslos \mbox{betrachtet}. \newline 
+\textbf{2.} Keine Wechselwirkung zwischen den \mbox{Molekülen}. \newline 
+\textbf{3.} Vollständiger Energieübertrag bei Stößen \mbox{Molekül-Molekül} und Molekül-Gefäßwand.\newline
+
+Reale Gase seien \textit{``bei hohen Temperaturen und geringen Dichten in guter Näherung als ideale Gase''} betrachtbar. Welche Eigenschaften \underline{haben} ideale Gase?
+Nach \mbox{Edme} \mbox{Mariotte} (1676) und (unabhängig) \mbox{Robert} \mbox{Boyle} (1662) (vgl. \textit{to boil} - Zufall?) gilt bei konstanter Temperatur \(T\) und Teilchenzahl \(N\)
+
+\begin{equation}
+    p_1V_1=p_2V_2
+\end{equation}
+
+und nach Joseph Louis Gay-Lussac (\textdagger 1850) für konstanten Druck und Teilchenzahl
+
+\begin{equation}
+    \frac{V_2}{V_1}=\frac{T_2}{T_1}
+    \label{eq:gay}
+\end{equation}
+
+Etwas umgeformt und -benannt führt Gl. \ref{eq:gay} zu der Volumenänderung \(\Delta V\) in Abhängigkeit der Temperaturänderung \(\Delta T\) skaliert durch den Quotienten aus
+Anfangsvolumen und -temperatur.
+
+\begin{equation}
+    \Delta V = V_1 \frac{1}{T_1} \Delta T = V_1 \gamma \Delta T
+\end{equation}
+\(\gamma\) wird hier als Temperaturausdehnungskoeffizient der idealen Gase bezeichnet und ist auf den Kehrwert des Nullpunktes der Celsius-Skala in Kelvin \(\vartheta  = \SI{0}{\celsius}\) festgelegt.
+Das macht durchaus Sinn, denn wäre er über Null Kelvin definiert, führt das einerseits zu einem mathematischen Problem und andererseits wäre die Volumenänderung durch Temperaturänderung nurnoch in
+eine Richtung mathematisch beschreibbar. Im Falle realer Gase kommen noch weitere andere Faktoren zum tragen (siehe oben) die dazu führen, dass sich zum einen der Zusammenhang weder proportional, noch linear
+verhält.\\
+
+Was haben wir noch gelernt? Es gibt etwas namens universelle Gaskonstante \(R\). Sie ist das Produkt aus der Avogadro-Zahl \(N_A\) (hallo Chemie) und der Boltzmann-Konstante \(k_B\). Leider
+ging das Skript nicht weiter auf die Herkunft von \(k_B\) als Naturkonstante ein. Halliday et. al. (2003) hat dazu zu sagen, dass sie über \(k_B = \frac{R}{N_A}\) definiert ist. 
+Im Vergleich zum Skript erst mal eine Tautologie. Ein Gegencheck mit der englischsprachigen Wikipedia liefert eine deutlich komplexere Definition:
+
+\be
+    S = k_B \ln{W}
+\ee
+
+Wobei \(S\) ein Maß für die Entropie eines makroskopischen Systems und \(W\) ein Maß für die statistische Wahrscheinlichkeit eines mikroskopischen Zustands (eines einzelnen Bestandteils des Systems?) ist.
+Da völlig durch zu steigen delegiere ich mal an Zukunfts-Dennis.\\
+Herr Boltzmann taucht auch nochmal in der Gleichung für die Gesamtenergie eines Gases auf.
+
+\be
+    \bar{E}_{ges} = \frac{1}{2}f k_B T = \bar{E}_{kin}
+\ee
+
+\(f\) ist hierbei die Anzahl der Freiheitsgrade der Teilchen innerhalb des Gases.
+
+Zum Abschluss zur Aufheiterung noch ein Bild zu CO2 in überkritischem Zustand:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{entries/2/critical.png}
+    \caption{Gelb: ein Hauch von Phasenübergang}
+\end{figure}
+Das Video dazu gibts \textcolor{blue}{\hyperlink{https://www.youtube.com/watch?v=RmaJVxafesU}{hier}}.
