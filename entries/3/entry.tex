@@ -1,0 +1,47 @@
+Hallo Logbuch. Es wird dir sicherlich nicht gefallen aber ich kann dir versichern, dass es
+nicht das ist, was ich wollte. Vielleicht beruhigt es dich aber, dass ihr beide ziemlich
+viel gemein habt. Thematisch wie intellektuell kann ich vieles mit euch beiden teilen
+und es wäre schön wenn wir uns - irgendwann - zu dritt begegnen könnten. Lass sehen, ich denke
+ich kann dich mit einer Story aufheitern. Diese Woche hatte ich mehrere sehr seltsame und
+teils hitzige Diskusionen mit der Geschäftsleitung der Firma in der ich arbeite. Ich arbeite
+seit einigen Monaten an drei Projekten parallel. Eines davon beinhaltet Dimensionierung, Bau
+und Kalibrierung eines 3D-Druckers. Dieser Drucker soll ein Druckbett mit den Maßen \SI{350x450x8}{mm}
+(Länge x Breite x Stärke) erhalten. Da es ein beheiztes Druckbett ist wird eine \SI{650}{W}
+Silikonheizmatte an die Unterseite geklebt. Seiner Meinung nach (die Geschäftsleitung ist ein Dude)
+sei es nicht möglich in endlicher Zeit mit dieser Heizung das Druckbett auf \(T_2 = \SI{80}{\celsius}\) zu bringen.
+Tatsache?\par
+Die spezielle Legierung mal außer Acht gelassen hat Aluminium laut Wikipedia eine Dichte von
+\( \rho = 2,7 \frac{g}{cm^{3}}\). Mit den gegebenen Außenmaßen ergibt das etwa eine Masse von
+\(m_{Al} = \SI{3,4}{kg}\). Folie 57 der VL kann ich eine spezifische Wärmekapazität für Aluminium
+von \(c_{Al} = \SI{900}{\frac{J}{kg*K}}\) entnehmen. Haben wir damit alles? Ach ja, weiter ziemlich nützlich
+ist der Zusammenhang - ebenfalls aus der VL auf Folie 53 - dass
+\begin{equation}
+    \Delta Q = cm \Delta T
+\end{equation}
+mit \(\Delta Q\) als zugeführter Wärmemenge, \(c\) als spezifischer Wärmekapazität, \(m\) als Masse und \(\Delta T\) als
+Änderung der Temperatur in Kelvin. Ich habe nur überschlagsmäßig gerechnet. Die Temperaturabhängigkeit 
+der Wärmekapazität von Aluminium verläuft in dem betrachteten Temperaturbereich ziemlich flach, also nahm ich sie
+als Konstant an. Außerdem ging ich von einer Raumtemperatur von \(T_1 = \SI{25}{\celsius}\) aus.\par
+Also: Welche Wärmemenge muss ich in den Aluklotz stecken um ihn hoch zu heizen?
+\begin{align}
+    \Delta Q    &= c_{Al}m_{Al}\Delta T \nonumber \\
+                &= c_{Al}m_{Al}(T_2 - T_1) \nonumber \\
+                &= \SI{900}{\frac{J}{kg*K} * \SI{3,4}{kg} * \SI{55}{K}} \nonumber \\
+                &= \SI{168300}{J} \nonumber
+\end{align}
+
+Mit der Leistung der Heizmatte \(P = \SI{650}{W}\) kommen ich dann auf
+
+\begin{align}
+    t   &= \frac{\Delta Q}{P} \nonumber\\
+        &= \frac{\SI{168300}{Ws}}{\SI{650}{W}} \nonumber \\
+        &= \SI{258,92}{s} = \SI{4,3}{min}
+\end{align}
+
+\textbf{In your face!} Da geh ich eben einen Kaffee holen und wenn ich zurück bin ist das Ding warm. Klar, bis sich die Temperatur
+homogenisiert hat dauerts auch noch einen Moment aber selbst mit dem Malus sieht es mir doch nach einer ziemlich endlichen
+Zeitspanne aus. Deckt sich super mit den heute gemessenen Werten von knapp fünf Minuten. Die Differenz
+lässt sich aller Wahrscheinlichkeit nach auf Verluste in den Leitungen und Abweichungen durch diverse Vereinfachungen
+erklären.\par\medskip
+So, ich muss jetzt auch los. Nein! Nicht das andere Logbuch. Wirklich. Es ist Wochenende - ich geh' ein bisschen
+extrovertieren. Mit Menschen.

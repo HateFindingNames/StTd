@@ -1,0 +1,79 @@
+Zunächst muss ich mir klar werden, wie sich Strömungslehre und Thermodynamik definieren. Meine ungebildete Vorstellung der Strömungslehre war zunächst,
+dass sie sich mit dem Verhalten der Bewegung einer Gesamtheit vieler einzelner Teilchen durch einen Räumlich begrenzten Bereich auseinander setzt.
+Damit meine ich beispielsweise den Luftstrom durch einen Lüfter, den Partikelstrom durch eine Turbine, das Verhalten von Flüssigkeiten durch Rohre
+aber auch Schüttverhalten verschiedener Medien oder Luftströmungen in der Atmosphäre etc.
+Laut Audio liegt der Fokus der LV auf dem Themengebiet der Thermodynamik da es im Leben als Ingenieur mehr Kontaktpunkte gäbe.\\
+
+Das erste merkenswerte ist die getroffene Unterscheidung zwischen Zustandsgröße und -variable. Sind Zustandsvariablen hier
+als Teilmenge der Zustandsgrößen zu verstehen? Laut Folie 7 bilden die Zustandsvariablen die Gesamtheit derjenigen Größen, die zur "`eindeutigen Beschreibung eines Systems
+ausreichen"'. Wikipedia hat hierzu zu sagen, dass
+\begin{quote}
+    \textit{"}\textit{eine Zustandsgröße (...) den Zustand eines physikalischen Systems beschreibt,
+    \textbf{aber im Rahmen der Betrachtung als Variable angesehen wird.}"}
+\end{quote}
+Was bedeutet das nun? Angenommen mein System besteht aus einem Treibgas in einer Spraydose, die ich ausreichend lange hab herumstehen lassen, so, dass
+sie und ihr Inhalt Raumtemperatur angenommen haben. Welche Größen beschreiben nun mein System eindeutig? Temperatur, Volumen des Gefäßes, Druck, Dichte
+des Treibgases, Volumen des Treibgases, Masse. Unter der Annahme gleich bleibender Raumtemperatur und ohne, dass ich auf die Sprühkappe drücke
+hat das System keinen anlass sich zu ändern. Betätige ich allerdings die Sprühkappe ändern sich einige der Zustandsgrößen - aber nicht alle! Das Volumen
+des Gefäßes etwa bleibt gleich wärend die übrigen Größen sich ändern. Ich hoffe ich habe das so richtig verstanden. In diesem Zusammenhang ebenfalls merkenswert
+ist die Unterteilung extensiver- und intensiver Größen (wobei mir die Erklärung trivial erschien).\\
+Was ist Enthalpie? Ein Maß für die \textit{innere Energie} eines Systems. Ich verstehe darunter das Vermögen eines Systems eine oder mehrere Zustandsgrößen
+eines anderen Systems ändern zu können. Bspw. eine definierte Menge Wasser die qua Temperatur in der Lage ist die Temperatur einer anderen Menge Wasser
+zu ändern sobald ich die beiden Mengen (Systeme) miteinander in Kontakt bringe.\\
+
+\textbf{0. Hauptsatz der Thermodynamik:}
+\begin{quote}
+    \textit{"}\textit{Alle Systeme, die sich mit einem gegebenem System im thermischen Gleichgewicht befinden, stehen auch untereinander im thermischen Gleichgewicht."}
+\end{quote}
+Die Erklärung dazu ist recht eingängig. Doch wie lauten die übrigen Hauptsätze? Impliziert die Null, dass der genannte Hauptsatz nachträglich eingeführt und
+den anderen übergeordnet wurde (es macht eher den anschein, als wäre hier einfach Informatikerstyle hochgezählt)?
+
+\begin{enumerate}
+    \item Hauptsatz: Die Energie innerhalb eines geschlossenen Systems bleibt erhalten.
+    \item Hauptsatz: Ein Perpetuum mobile zweiter Art ist unmöglich. (es gibt noch viele andere Formulierungen aber im Grunde ist hier gemeint, dass es nicht
+    möglich ist eine gegebene Menge thermischer Energie vollständig in z.b. mechanische Energie umzuwandeln).
+    \item Hauptsatz: Es ist unmöglich ein System auf 0 K abzukühlen.
+\end{enumerate}
+
+Temperaturskalen: Celsius - intervallskaliert, Kelvin - ratioskaliert, Fahrenheit - intervallskaliert. Sollte man das nicht mittlerweile boykottieren?
+Zumindest ist es gut den Umrechnungsfaktor zu kennen: \( T_F(T_C) = \frac{9}{5} T_C + 32 \). Hier ist einerseits erkennbar, dass der
+Zusammenhang zwischen °C und °F linear ist und zum anderen, dass bei \SI{32}{} °F der Gefrierpunkt liegt (\SI{0}{} °C). Wir haben nun Einheiten um Temperaturen
+angeben zu können. Messbar sind sie auf vielen verschiedenen Wegen. Bemerkenswert ist aber, dass einige Wege umkehrbar während es andere nicht sind. Das Thermoelement
+etwa funktioniert basierend auf dem Phänomen der Thermoelektrizität oder dem Seebeck-Effekt im Speziellen. Durch ein Temperaturunterschied \(\Delta t\) wird eine
+Spannung \(U_{th}\) erzeugt. Umgekehrt kann aber auch durch eine angelegte Spannung eine Temperaturdifferenz provoziert werden (Peltier-Effekt). Der Wirkungsgrad
+ist zwar sehr gering, die erzeugten Temperaturdifferenzen sind bei relativ kleinen Leistungen (\SI{12}{V} und \SI{5}{}-\SI{10}{A}) aber schon beachtlich.\\
+
+Temperaturdifferenzen verursachen aber immer auch räumliche Ausdehnungen oder Kontraktionen des erwärmten oder gekühlten Materials (bezogen auf eine Referenztemperatur \(T_0\)
+und -länge \(L_0\)). Die Änderung der Länge \(L(T)\) lässt sich mittels folgender Gleichung beschreiben:
+
+\be
+    L(T) = L_0 (1 + \alpha \Delta T) \label{length}\\
+\ee
+
+Diese Gleichung beinhaltet den materialspezifischen \textit{Temperaturausdehnungskoeffizienten} \(\alpha\) in der Einheit \(\SI{}{K}^{-1}\), die ursprüngliche Länge \(L_0\)
+und die Temperaturdifferenz \(\Delta T\) die sich durch Subtraktion der ursprünglichen Temperatur \(T_0\) von der Zieltemperatur \(T\) ergibt.
+Hieraus lassen sich nun auch Flächen- und Volumenausdehnungen ableiten. Im Zuge der LV sollte aus \gl{length} unter der Annahme, dass es sich um ein quadratisches Material handelt,
+die gegebene Gleichung für die temperaturabhängige Flächenausdehnung 
+
+\begin{equation}
+A(T) \approx  A_0 (1 + 2 \beta \Delta T) \label{area}
+\end{equation}
+
+mit
+
+\begin{equation*}
+    \beta = 2 \alpha
+\end{equation*}
+
+selbst hergeleitet werden.
+
+\begin{align}
+    A(T) &= L^{2}(T) = L_{0}^{2} (1 + \alpha \Delta T)^{2} \nonumber\\
+    A(T) &= A_0 (1 + 2 \alpha \Delta T + \alpha^{2} \Delta T^{2}) \label{area_exakt}
+\end{align}
+
+\gl{area_exakt} liefert hier die exakte Lösung. Da allerdings die materialspezifischen Temperaturausdehnungskoeffizienten für die meisten gängigen Materialen (gibt es welche, die hier stark abweichen?)
+mit \(10^{-6}\) eingehen können Therme mit \(\alpha^{n>1} | n \in \mathbb{N} \) in ausreichend guter Näherung vernachlässigt werden. Wenn weiter \(2 \alpha\) mit \(\beta\) substituiert wird führt das genau zu
+\gl{area}. Analog hierzu lässt sich auch die Volumenausdehnung mit \(\gamma = 3\alpha\) berechnen.\\
+Da temperaturbedinge Längenausdehnungen immer nach außen zeigen kann man sich diesen Umstand zu Nutze machen um beispielsweise eine Welle in eine Passung pressen zu können. Vor dem Fügen
+wird hier die Passung mit geeigneten Mitteln erwärmt bzw. die Welle gekühlt.
