@@ -1,0 +1,38 @@
+Logbuch, Donnerstag der 4.6. Anno insoliti.\absatzmid
+Wir diskutieren Wärmeübertragung bzw. Wärmeübergang, wie sie sich in Mathematik gießen lassen und ein bisschen ihre physikalischen Ursachen.
+Es werden zunächst dreierlei Wege des Wärmetransports unterschieden:
+\begin{enumerate}
+    \item Transport durch Impuls (Teilchenstöße).
+    \item Transport durch Materie (Konvektion).
+    \item Transport durch elektromagnetische Emmision/Absorption.
+\end{enumerate}
+
+Die Mathematik zum Wärmeübergang kommt im allgemeinen in folgender Gestalt daher
+\begin{equation} \label{eq:temp}
+    \frac{\Delta Q}{\Delta t} = \dot{Q} = \alpha_K \cdot A \cdot (\Delta T)
+\end{equation}
+mit
+\begin{align*}
+    &\dot{Q} & &\text{Wärmestrom}\\
+    &\alpha  & &\text{Proportionalitätskoeffizient}\\
+    &A         & &\text{Betrachtete Fläche}\\
+    &\Delta T  & &\text{Steilheit des Wärmegradienten}
+\end{align*}
+
+Der Proporionalitätskoeffizient \(\alpha_K\) kann je nach Situation verschiedene Namen und Werte annehmen. Im Falle
+der \fett{Konvektion} handelt es sich um den Wärmeübergangskoeffizienten, im Falle der \fett{Wärmeleitung} durch
+(homogene?) Festkörper ist es der Wärmedurchlasskoeffizient \(\Lambda = \frac{\lambda}{d}\) mit \(\lambda\) als Wärmeleitfähigkeit und \(d\) als
+Distanz zwischen den beiden betrachteten Wandflächen. Wandflächen? Danke, dass du fragst. Hier wird von einem,
+ausgehend von der Grundfläche \(A\), linear extrudierten Körper ausgegangen. Ich schätze, dass die Beschreibung eines
+beliebigen Körpers nicht mehr gar so einfach sein wird. Der \fett{Wärmeübergang} ist sehr ähnlich der Wärmeleitung.
+Hier wird der Wärmetransport von einem Material in ein anderes beschrieben. Hier wird \(\alpha\) zum \fett{Wärmeübergangskoeffizienten}.
+Noch nicht genug? \fett{Wärmedurchgang}\par\medskip
+
+Nachtrag: es gab neuerdings und wie immer extrem dankenswerterweise ein Video zur Thematik.
+Interessanterweise lässt sich Gl. \ref{eq:temp} analog zum ohmsche Gesetzt behandeln. Aus \(U R I\) wird dann etwas sperriger \(\Delta T R_{th} \dot{Q}\)
+mit
+\begin{align*}
+    &R_{th} = \frac{1}{\alpha \cdot A} & &\text{für Wärmeübergang und Konvektion}\\
+    &R_{th} = \frac{d}{\lambda \cdot A} & &\text{für Wärmeleitung}\\
+    &R_{th} = \frac{1}{k \cdot A} & &\text{für Wärmedurchgang}
+\end{align*}
