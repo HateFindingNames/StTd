@@ -1,0 +1,31 @@
+Diese Woche ging es (mir) in erster Linie um den Begriff der Entropie. Ja, haben wir schonmal drüber diskutiert (Eintrag
+\#2, Gl. 2.4). Ich bin mir allerdings nicht sicher, ob ich im Vergleich zu damals nennenswert schlauer wurde. Zunächst aber
+etwas Kontext: Es ist möglich Prozesse zyklisch ablaufen zu lassen. Bedeutet, dass, mit beliebig vielen Zwischenschritten,
+der Endzustand dem Anfangszustand entspricht. Ein Kreisprozess innerhalb eines geschlossenen Systems wird sich allerdings
+nicht selbstständig aufrecht erhalten, da Teilschritte eine Senkung der Entropie vorraussetzen und genau hier hat die Natur
+Vetorecht. Auf natürliche Weise kann Entropie nur gleich bleiben oder ansteigen (\(\Delta S \geqq 0\)). Mit dem aus dem Weg
+kommen wir zum interessanten Teil - was ist Entropie?
+\textit{"Die Entropie beschreibt die Zahl der Mikrozustände durch die der beobachtete Makrozustand des Systems realisiert werden kann."} - uff.
+Mikrozustände kann jemand auffassen als Möglichkeiten \(n\) verschiedene Socken auf \(N\) Schubladen zu verteilen.
+An die Anzahl der Mikrozustände komme ich in diesem Fall mittels
+\begin{equation}
+    a = N^n
+    \label{eq:1}
+\end{equation}
+Aus Sicht eines sockenaffinen Besuchers wird jedem Mikrozustand (Möglichkeit der Sockenverteilung) die gleiche Wahrscheinlichkeit
+zugeordnet. Die Wahrscheinlichkeit ergibt sich also als Kehrwert der Anzahl der möglichen Mikrozustände. Wie verhält sich
+die Sache jetzt wenn der seltsame Besucher minimal modisch interessiert ist seiner Meinung nach die Socken daher nicht zu
+unterscheiden sind? In dem Fall kann man die konkrete Kombination der Socken in den Schubladen vernachlässigen, sich
+bloß auf die Anzahl der Socken in den Schubladen konzentrieren und die übrigen Möglichkeiten Makrozustände nennen.
+Klingt simpel aber die Berechnung dazu wird gleich deutlich komplexer.
+\begin{equation}
+    b = \binom{N+n-1}{n} = \frac{(N+n-1)!}{n! \cdot (N-1)!}
+    \label{eq:2}
+\end{equation}
+Bei zwei Schubladen und fünf Socken (die Waschmaschine hat eine weg gezaubert) ergibt Gleichung \ref{eq:1} 32 Mikrozustände
+und Gleichung \ref{eq:2} sechs Makrozustände. Wie verhalten sich nun aber die Wahrscheinlichkeiten bezogen auf die
+Makrozustände? In der Theorie, da die Socken nicht unterscheidbar sind, kann jemand bestimmte Mikrozustände zu Makrozuständen
+gruppieren. Die Wahrscheinlich für einen Makrozustand ergäbe sich dann als Summe der Einzelwahrscheinlichkeiten innerhalb
+seiner Gruppe. Ich habe es aber noch nicht zustande gebracht das in Mathematik zu gießen. Das ist per se schon ärgerlich,
+darüber hinaus nervt es aber auch, da \(W\) aus der eingangs genannte Gleichung aus Eintrag \#2 der Quotient aus der
+Wahrscheinlichkeit für einen Makrozustand und der Anzahl der Mikrozustände ist. Das schreit nach mehr Epistemologie...
